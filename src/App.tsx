@@ -3,6 +3,7 @@ import Auth from "./components/Auth";
 import Cookies from "universal-cookie";
 import {signOut} from "firebase/auth";
 import {auth} from "../firebaseConfig";
+import Chatroom from "./components/ChatRoom";
 
 const cookies = new Cookies()
 const App = () => {
@@ -14,11 +15,12 @@ const App = () => {
     }
 
     const [isAuthenticated, setIsAuthenticated] = useState(cookies.get('auth-token'));
+
     return (
         <div>
             {isAuthenticated
                 ? <div>
-                    <p>Is authenticated </p>
+                    <Chatroom/>
                     <button onClick={logOut}> Log out</button>
                 </div>
                 : <Auth setIsAuthenticated={setIsAuthenticated}/>}
