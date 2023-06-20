@@ -1,17 +1,17 @@
-import { initializeApp } from "firebase/app";
+import {initializeApp} from "firebase/app";
 import {getAuth, GoogleAuthProvider} from "firebase/auth";
-import {getFirestore} from 'firebase/firestore '
+import {getFirestore} from "firebase/firestore";
 
 export const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    apiKey: 'AIzaSyCCMdFMq0U8eEW8K7ZLFesy81WenE63xUo',
+    authDomain: 'fir-react-demo-test.firebaseapp.com',
+    projectId: 'fir-react-demo-test',
+    storageBucket: 'fir-react-demo-test.appspot.com',
+    messagingSenderId: '1095579200553',
+    appId: '1:1095579200553:web:bbe185c6bd267f6f600038',
 };
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
-export const db =  getFirestore(app)
+export const db = getFirestore(app)
